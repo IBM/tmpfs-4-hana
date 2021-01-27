@@ -1,0 +1,13 @@
+[Unit]
+Description=Fast Restart SAP HANA Adjustment Script
+After=local-fs.target
+After=network.target
+After=remote-fs.target
+
+[Service]
+Type=oneshot
+# NOTE: Adjust the path to the startup script.
+ExecStart=/bin/sh -c "/usr/sap/tmpfs/tmpfs4hana.sh -m -u -c /usr/sap/tmpfs/tmpfs4hana.cfg -l /usr/sap/tmpfs/tmpfs4hana.log"
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,6 @@
+[
+	{
+		"sid": "DBO" 
+		,"mntparent": "/hana/tmpfs"
+	}
+]
